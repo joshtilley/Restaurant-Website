@@ -1,0 +1,171 @@
+@font-face {
+    font-family: 'Bitter';
+    src: url(BitterPro-Regular.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Bitter';
+    src: url(BitterPro-Light.ttf) format('truetype');
+    font-weight: light;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Bitter';
+    src: url(BitterPro-Bold.ttf) format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Bitter';
+    src: url(BitterPro-Italic.ttf) format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Bitter';
+    src: url(BitterPro-BoldItalic.ttf) format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+:root {
+    /* colours */
+    --background: hsl(48, 80%, 97%);
+    --logo-color: hsl(354, 100%, 30%);
+    --highlight: hsl(44, 100%, 55%);
+    /* header height */
+    --header-height: 5em;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Bitter';
+    font-weight: normal;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    height: var(--header-height);
+    background-color: var(--logo-color);
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5em;
+}
+
+nav button {
+    background-color: transparent;
+    border: none;
+    text-decoration: underline transparent;
+    text-underline-offset: 0.2em;
+    padding-bottom: 5px;
+    font-size: 2em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.6s;
+}
+
+nav button:hover {
+    text-decoration: underline var(--highlight);
+    text-underline-offset: 0.2em;
+    color: var(--highlight);
+    transition: 0.3s;
+}
+
+main {
+    flex-grow: 1;
+}
+
+.content {
+    height: calc(100% - var(--header-height));
+    transition: 0.4s;
+}
+
+.background-container {
+    position: absolute;
+    width: 50%;
+    right: 0;
+    height: inherit;
+    transition: 0.4s;
+}
+
+.background-image {
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-image: url("https://images.unsplash.com/photo-1573036204903-74323c2eb0d6?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-position: bottom;
+    background-size: scale-down;
+}
+
+.homepage-content {
+    box-sizing: border-box;
+    position: absolute;
+    width: 50%;
+    min-width: 500px;
+    height: inherit;
+    z-index: 3;
+    background-color: var(--background);
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-rows: 1fr 2fr;
+    padding: 4em;
+}
+
+.logo-large {
+    width: 50%;
+    min-width:220px;
+    float: top;
+    user-select: none;
+}
+
+.homepage-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.2em;
+}
+
+.homepage-text h2 {
+    font-size: 2.1em;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.tagline {
+    font-size: 1.6rem;
+    padding-bottom: 1em;
+    font-style: italic;
+}
+
+.desc {
+    font-size: 1.1em;
+    padding-bottom: 3em;
+}
+
+
