@@ -17,7 +17,7 @@ export const home_html = {
 
 // menu html
 export const menu_html = `
-    <h2>Dinner menu <span class="non-bold-header-text">at </span><span class="brand-name-text">Tilley's</span></h2>
+    <h2>Dinner <span class="non-bold-header-text">at </span><span class="brand-name-text">Tilley's</span></h2>
     <p class="menu-items price-options"><span><em>Two courses:</em> £26</span><span><em>Three courses:</em> £30</span></p>
     <h3>Starters:</h3>
     <ul class="menu-items">
@@ -50,12 +50,8 @@ export const menu_html = `
 export const aboutUs_html = {
     "our story": `
         <h3>Our Story</h3>
-        Tilley's was opened in 2008, when experienced chef J. B. Tilley decided to take a risk, and converted a distinctive farmer's cottage into a cosy venue to deliver a fine dining experience to the people of Totley. Tilley's quickly gained a reputation for its balance of comforting British classics (you must try our signature shephard's pie) and modern gastronomical offerings.
-        <br>
-        <br>
-        Located in the heart of the English countryside, we pride ourselves on using only the finest ingredients in our cooking. As a result, our menu will change depending on season and on the availability of quality produce.
-        <br>
-        <br>`,
+        <p>Tilley's was opened in 2008, when experienced chef J. B. Tilley decided to take a risk and convert a distinctive farmer's cottage into a cosy venue to deliver fresh and delicious food to the people of Totley. Tilley's quickly gained a reputation for its balance of comforting British classics (you must try our signature shephard's pie) and modern gastronomical offerings.</p>
+        <p>Located in the heart of the English countryside, we pride ourselves on using only the finest ingredients in our cooking. As a result, our menu will change depending on season and on the availability of quality produce.`,
     "footer content": `
         <span>
             <h3>Contact</h3>
