@@ -1,3 +1,5 @@
+Github Pages Link: https://joshtilley.github.io/Restaurant-Website/
+
 Mock website created to practice webpack. 
 
 Each page of the website is contained within its own module. 
