@@ -21,51 +21,39 @@ home_btn.addEventListener('click', function() {
 
     prevPage = currentPage;
     currentPage = "home";
-    if (prevPage === "home") {
-        return;
-    }
-    else if (prevPage === "menu") {
+
+    if (prevPage === "menu") {
         menuPageTransition_out();
-        // setTimeout(() => hideMenuPage(), 1000)
     }
     else if (prevPage === "about"){
         aboutPageTransition_out();
-        // setTimeout(() => hideAboutPage(), 1000)
-    }
-})
+    };
+});
 
 menu_btn.addEventListener('click', function() {
     menuPage();
+    
     prevPage = currentPage;
     currentPage = "menu";
+    
     if (prevPage === "home") {
         homePageTransition_out();
-        // setTimeout(() => hideHomePage(), 1000)
-    }
-    else if (prevPage === "menu") {
-        menuPageTransition_out();
-        // setTimeout(() => hideMenuPage(), 1000)
     }    
     else if (prevPage === "about"){
         aboutPageTransition_out();
-        // setTimeout(() => hideAboutPage(), 1000)
-    }
-})
+    };
+});
 
 story_btn.addEventListener('click', function() {
     aboutPage();
 
     prevPage = currentPage;
     currentPage = "about";
+
     if (prevPage === "home") {
         homePageTransition_out();
-        // setTimeout(() => hideHomePage(), 1000)
     }
     else if (prevPage === "menu") {
         menuPageTransition_out();
-        // setTimeout(() => hideMenuPage(), 1000)
-    }
-    else if (prevPage === "about"){
-        return;
-    }
-})
+    };
+});

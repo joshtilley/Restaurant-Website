@@ -33,6 +33,7 @@ export function menuPage(){
     menuPageTransition_in();
 }
 
+// transitions
 function menuPageTransition_in() {
     const backgroundImage_div = document.querySelector('.background-container');
     const menuContainer_div = document.querySelector('.menu-container');

@@ -41,6 +41,7 @@ export function aboutPage() {
     aboutPageTransition_in();
 }
 
+// transitions
 function aboutPageTransition_in() {
     const backgroundImage_div = document.querySelector('.background-container');
     const aboutPageContainer_div = document.querySelector('.about-container');

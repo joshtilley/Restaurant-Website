@@ -46,22 +46,19 @@ export function homePage() {
     };  
 }
 
+// transitions
 function homepageTransition_in() {
-    const backgroundImage_div = document.querySelector('.background-container');
     const homeContent_div = document.querySelector('.homepage-container');
 
     setTimeout(() => {
-        backgroundImage_div.classList.remove('left-background');
         homeContent_div.classList.remove('homepage-transition');
     }, 10);
 }
 
 export function homePageTransition_out() {
-    const backgroundImage_div = document.querySelector('.background-container');
     const homeContent_div = document.querySelector('.homepage-container');
 
     setTimeout(() => {
-        backgroundImage_div.classList.add('left-background');
         homeContent_div.classList.add('homepage-transition');
     }, 10);
 }

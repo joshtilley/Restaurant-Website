@@ -1,3 +1,4 @@
+// logo svg html
 export const logo_svg = `
     <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" xmlns:bx="https://boxy-svg.com">
         <defs></defs>
@@ -59,7 +60,7 @@ export const aboutUs_html = {
         <span>
             <h3>Contact</h3>
             <span>
-                <em>Tel:</em> 01629 816xxx
+                <em>Tel -</em> 01629 816xxx
             </span>
         </span>
         <span>

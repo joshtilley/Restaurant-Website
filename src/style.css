@@ -42,7 +42,7 @@
     /* header height */
     --header-height: 5em;
     /* transitions */
-    --newpage-transition: 0.6s ease;
+    --newpage-transition: 0.8s ease;
 }
 
 * {
@@ -90,6 +90,7 @@ a {
     text-decoration: none;
 }
 
+/* header & nav bar */
 header {
     position: sticky;
     top: 0;
@@ -127,6 +128,13 @@ nav button:hover {
     transition: 0.4s ease;
 }
 
+@media only screen and (max-width: 600px)  {
+    nav button {
+        font-size: 5vw;
+    }
+}
+
+/* main page content */
 main {
     flex-grow: 1;
 }
@@ -204,11 +212,13 @@ main {
 }
 
 .homepage-text {
+    margin-top: 1em;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     align-items: center;
     text-align: center;
-    gap: 1.2em;
+    gap: 0.7em;
 }
 
 .tagline {
@@ -219,7 +229,6 @@ main {
 
 .open-times {
     font-size: 1.1em;
-    padding-bottom: 3em;
 }
 
 /* menu page */
@@ -290,6 +299,7 @@ main {
 .logo-inline {
     float: left;
     margin: 9px 9px 9px 0;
+    padding: 1em 1em 1em 0;
     width: 250px;
     min-width: 100px;
     display: flex;
@@ -298,7 +308,11 @@ main {
 }
 
 .about-textbox {
+    height: 100%;
     text-align: justify;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .about-footer {
@@ -313,4 +327,14 @@ main {
     justify-content: center;
     gap: 0.5em;
     text-align: right;
+}
+
+@media only screen and (max-height: 920px) {
+    .page-content {
+        overflow-y: scroll;
+    }
+
+    .about-textbox {
+        justify-content: start;
+    }
 }
