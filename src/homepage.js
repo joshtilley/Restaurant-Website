@@ -47,7 +47,7 @@ export function homepage() {
     tagline_p.innerText = 
         "...focussed on delivering simple, modern, British cuisine.";
     desc_p.innerHTML = 
-        `Tuesday to Sunday:<br> Lunch - <em>12pm - 3pm</em> <br> Dinner - <em>5:30pm - 9pm</em>`;
+        `<h4>Tuesday to Sunday :</h4>Lunch - <em>12pm</em> to <em>3pm</em> <br> Dinner - <em>5:30pm</em> to <em>9pm</em>`;
     
     homeText_div.append(header_h2, tagline_p, desc_p);
 

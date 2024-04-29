@@ -22,7 +22,7 @@ export function menupage(){
     menuLogo_div.classList.add('logo-small');
 
     menuBody_div.innerHTML =
-        `<h2>Dinner menu</h2>
+        `<h2>Dinner menu <span class="non-bold-header-text">at </span><span class="brand-name-text">Tilley's</span></h2>
         <p class="menu-items price-options"><span><em>Two courses:</em> £26</span><span><em>Three courses:</em> £30</span></p>
         <h3>Starters:</h3>
         <ul class="menu-items">

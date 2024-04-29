@@ -37,7 +37,7 @@
     /* colours */
     --background: hsl(48, 80%, 93%);
     --header-text: hsl(48, 80%, 92%);
-    --logo-color: hsl(354, 100%, 31%);
+    --main-brand-color: hsl(354, 100%, 31%);
     --highlight: hsl(44, 100%, 55%);
     /* header height */
     --header-height: 5em;
@@ -69,6 +69,7 @@ h2 {
     font-size: 2.1em;
     font-weight: bold;
     font-style: italic;
+    letter-spacing: 0.05rem;
 }
 
 h3 {
@@ -76,15 +77,24 @@ h3 {
     font-style: italic;
 }
 
+h4 {
+    font-weight: bold;
+}
+
 ul {
     list-style-type: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
 }
 
 header {
     position: sticky;
     top: 0;
     height: var(--header-height);
-    background-color: var(--logo-color);
+    background-color: var(--main-brand-color);
     z-index: 3;
     display: flex;
     justify-content: center;
@@ -123,7 +133,6 @@ main {
 
 .content {
     height: calc(100% - var(--header-height));
-    transition: 0.4s;
     overflow: hidden;
 }
 
@@ -132,14 +141,14 @@ main {
     width: 50%;
     right: 0;
     height: inherit;
-    background-image: url("https://images.unsplash.com/photo-1573036204903-74323c2eb0d6?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
-    background-position: bottom;
+    background-image: url("https://images.unsplash.com/photo-1515746648922-b3413763645a?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-position: bottom 20% right 35%;
     background-size: scale-down;
     transition: var(--newpage-transition);
 }
 
 .left-background {
-    background-position: bottom right 15%;
+    background-position: bottom 10% right 15%;
     right: 50%;
     transition: var(--newpage-transition);
 }
@@ -226,6 +235,16 @@ main {
     transition: var(--newpage-transition);
 }
 
+.non-bold-header-text {
+    font-weight: normal;
+}
+
+.brand-name-text {
+    color: var(--main-brand-color);
+    font-weight: bold;
+    font-style: normal;
+}
+
 .menu-footer {
     display: flex;
     justify-content: center;
@@ -248,4 +267,34 @@ main {
 
 .menu-body li {
     padding: 0.2em;
+}
+
+/* about page */
+
+.logo-inline {
+    float: left;
+    margin: 9px 9px 9px 0;
+    width: 250px;
+    min-width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.story-textbox {
+    text-align: justify;
+}
+
+.story-footer {
+    display: flex;
+}
+
+.story-footer-content {
+    flex-grow: 1;
+    margin: 9px 0 9px 9px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5em;
+    text-align: right;
 }
