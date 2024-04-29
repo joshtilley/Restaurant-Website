@@ -1,34 +1,34 @@
 @font-face {
     font-family: 'Bitter';
-    src: url(BitterPro-Regular.ttf) format('truetype');
+    src: url(./fonts/BitterPro-Regular.ttf) format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Bitter';
-    src: url(BitterPro-Light.ttf) format('truetype');
+    src: url(./fonts/BitterPro-Light.ttf) format('truetype');
     font-weight: light;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Bitter';
-    src: url(BitterPro-Bold.ttf) format('truetype');
+    src: url(./fonts/BitterPro-Bold.ttf) format('truetype');
     font-weight: bold;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Bitter';
-    src: url(BitterPro-Italic.ttf) format('truetype');
+    src: url(./fonts/BitterPro-Italic.ttf) format('truetype');
     font-weight: normal;
     font-style: italic;
 }
 
 @font-face {
     font-family: 'Bitter';
-    src: url(BitterPro-BoldItalic.ttf) format('truetype');
+    src: url(./fonts/BitterPro-BoldItalic.ttf) format('truetype');
     font-weight: bold;
     font-style: italic;
 }
@@ -37,12 +37,12 @@
     /* colours */
     --background: hsl(48, 80%, 93%);
     --header-text: hsl(48, 80%, 92%);
-    --logo-color: hsl(354, 100%, 35%);
+    --logo-color: hsl(354, 100%, 31%);
     --highlight: hsl(44, 100%, 55%);
     /* header height */
     --header-height: 5em;
     /* transitions */
-    --newpage-transition: 0.5s;
+    --newpage-transition: 0.6s ease;
 }
 
 * {
@@ -59,6 +59,7 @@ html {
 
 body {
     height: 100%;
+    background-color: var(--background);
     display: flex;
     flex-direction: column;
     overflow: hidden;
@@ -89,7 +90,7 @@ header {
     justify-content: center;
 }
 
-nav {
+nav, .nav-buttons {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -131,17 +132,21 @@ main {
     width: 50%;
     right: 0;
     height: inherit;
+    background-image: url("https://images.unsplash.com/photo-1573036204903-74323c2eb0d6?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-position: bottom;
+    background-size: scale-down;
+    transition: var(--newpage-transition);
+}
+
+.left-background {
+    background-position: bottom right 15%;
+    right: 50%;
     transition: var(--newpage-transition);
 }
 
 .background-image {
     width: 100%;
     height: 100%;
-    z-index: 1;
-    background-image: url("https://images.unsplash.com/photo-1573036204903-74323c2eb0d6?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
-    background-position: bottom;
-    background-size: scale-down;
-    transition: var(--newpage-transition)
 }
 
 .page-content {
@@ -154,6 +159,10 @@ main {
     background-color: var(--background);
     padding: 4em;
     transition: var(--newpage-transition);
+}
+
+.hide {
+    display: none;
 }
 
 
@@ -188,7 +197,7 @@ main {
 
 .tagline {
     font-size: 1.6rem;
-    padding-bottom: 1em;
+    padding-bottom: 0.5em;
     font-style: italic;
 }
 
@@ -199,15 +208,9 @@ main {
 
 /* menu page */
 
-.menu-background {
-    right: 50%;
-    transition: var(--newpage-transition);
-}
-
 .logo-small {
-    width: 27%;
+    width: 150px;
     min-width: 70px;
-    max-width: 150px;
 }
 
 .menu-container {

@@ -1,6 +1,21 @@
 export function homepage() {
     const pageContent_div = document.querySelector('.content');
     
+    // controls transition and prevents duplication of content
+    if (document.querySelector('.homepage-content')) {
+        const backgroundImage_div = document.querySelector('.background-container');
+        const homeContent_div = document.querySelector('.homepage-content');
+        const menuContainer_div = document.querySelector('.menu-container');
+
+        setTimeout(() => {
+            backgroundImage_div.classList.remove('left-background');
+            homeContent_div.classList.remove('homepage-transition');
+            menuContainer_div.classList.remove('menu-transition');
+        }, 10);
+
+        return;
+    }; 
+    
     // creates textbox 
     const homeContent_div = document.createElement('div');
     homeContent_div.classList.add('page-content', 'homepage-content');
@@ -30,9 +45,9 @@ export function homepage() {
     header_h2.innerText = 
         "Located in the beating heart of England...";
     tagline_p.innerText = 
-        "...focussed on delivering simple, modern British cuisine.";
-    desc_p.innerText = 
-        "Our mission is to show the world that there's more to our nation than beans on toast.";
+        "...focussed on delivering simple, modern, British cuisine.";
+    desc_p.innerHTML = 
+        `Tuesday to Sunday:<br> Lunch - <em>12pm - 3pm</em> <br> Dinner - <em>5:30pm - 9pm</em>`;
     
     homeText_div.append(header_h2, tagline_p, desc_p);
 
@@ -41,17 +56,17 @@ export function homepage() {
     pageContent_div.appendChild(homeContent_div);
     
     // creates background image 
-    const backgroundImage_div = document.createElement('div');
-    backgroundImage_div.classList.add('background-container');
-    
-    let img = document.createElement('div');
-    img.classList.add('background-image');
+    if (!document.querySelector('.background-container')) {
+        const backgroundImage_div = document.createElement('div');
+        backgroundImage_div.classList.add('background-container');
+        
+        pageContent_div.appendChild(backgroundImage_div);
+    }
 
-    backgroundImage_div.appendChild(img);
-    pageContent_div.appendChild(backgroundImage_div);
+    const backgroundImage_div = document.querySelector('.background-container');   
 }
 
-export function clearHomepage() {
-    const homeContent_removeDiv = document.querySelector('.homepage-content');
-    homeContent_removeDiv.remove();
+export function hideHomepage() {
+    const homeContent_div = document.querySelector('.homepage-content');
+    homeContent_div.classList.add('hide')
 }
