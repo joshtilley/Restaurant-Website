@@ -6,7 +6,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   entry: {
    index: './src/index.js',
-   homepage: './src/homepage.js',
   },
   output: {
     filename: '[name].js',

@@ -281,15 +281,15 @@ main {
     align-items: center;
 }
 
-.story-textbox {
+.about-textbox {
     text-align: justify;
 }
 
-.story-footer {
+.about-footer {
     display: flex;
 }
 
-.story-footer-content {
+.about-footer-content {
     flex-grow: 1;
     margin: 9px 0 9px 9px;
     display: flex;

@@ -1,3 +1,5 @@
+import {logo} from './html-inserts.js'
+
 export function menupage(){
     const pageContent_div = document.querySelector('.content');
 
@@ -51,14 +53,7 @@ export function menupage(){
             <li><em>Ice cream</em> - served with a coffee of your choice</li>
         </ul>`
     
-    menuLogo_div.innerHTML =
-        `<svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" xmlns:bx="https://boxy-svg.com">
-            <defs></defs>
-            <path d="M 0 0 H 500 V 500 H 0 V 0 Z M 15.872 16.025 V 483.975 H 484.128 V 16.025 H 15.872 Z" style="stroke: rgba(0, 0, 0, 0); fill: hsl(354, 100%, 35%);" bx:shape="frame 0 0 500 500 15.872 16.025 0 0 0 0 1@67eee14e"></path>
-            <text style="fill: hsl(354, 100%, 35%); font-family: &quot;Bitter Pro&quot;; font-size: 132.8px; font-weight: 700; white-space: pre;" x="30.101" y="251.043">Tilley's</text>
-            <text style="fill:hsl(354, 100%, 35%); font-family: &quot;Bitter Pro&quot;; font-size: 75px; white-space: pre;" x="63.093" y="355.903">Bar &amp; Bistro</text>
-            <text style="fill: hsl(354, 100%, 35%); font-family: &quot;Bitter Pro&quot;; font-size: 37px; white-space: pre;" x="312.583" y="442.426">est. 2008</text>
-        </svg>`
+    menuLogo_div.innerHTML = 
 
     menuFooter_div.appendChild(menuLogo_div);
     menuContainer_div.append(menuBody_div, menuFooter_div);

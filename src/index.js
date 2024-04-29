@@ -2,13 +2,14 @@ import './style.css';
 import {homepage} from './homepage.js';
 import {hideHomepage} from './homepage.js';
 import { menupage } from './menupage.js';
+import {aboutpage} from './aboutpage.js';
 
 const home_btn = document.getElementById('home');
 const menu_btn = document.getElementById('menu');
 const story_btn = document.getElementById('story');
 
 window.addEventListener('DOMContentLoaded', function() {
-
+    aboutpage();
 });
 
 home_btn.addEventListener('click', function() {
