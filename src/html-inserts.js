@@ -18,7 +18,7 @@ export const home_html = {
 // menu html
 export const menu_html = `
     <h2>Dinner <span class="non-bold-header-text">at </span><span class="brand-name-text">Tilley's</span></h2>
-    <p class="menu-items price-options"><span><em>Two courses:</em> £26</span><span><em>Three courses:</em> £30</span></p>
+    <p class="menu-items price-options"><span><em>Two courses:</em><br>£26</span><span><em>Three courses:</em><br>£30</span></p>
     <h3>Starters:</h3>
     <ul class="menu-items">
         <li><em>Smoked merguez</em> - curried lentils & red onion chutney</li> 

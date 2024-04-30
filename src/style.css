@@ -128,12 +128,6 @@ nav button:hover {
     transition: 0.4s ease;
 }
 
-@media only screen and (max-width: 600px)  {
-    nav button {
-        font-size: 5vw;
-    }
-}
-
 /* main page content */
 main {
     flex-grow: 1;
@@ -149,7 +143,6 @@ main {
     width: 50%;
     right: 0;
     height: inherit;
-    background-image: url("https://images.unsplash.com/photo-1515746648922-b3413763645a?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
     background-position: bottom 20% right 35%;
     background-size: scale-down;
     transition: var(--newpage-transition);
@@ -165,12 +158,6 @@ main {
     right: 0;
     background-position: bottom 35% right 10%;
     transition: var(--newpage-transition);
-}
-
-.background-image {
-    padding: 4em;
-    width: 100%;
-    height: 100%;
 }
 
 .content {
@@ -197,10 +184,10 @@ main {
 }
 
 .homepage-container {
-    display: grid;
-    justify-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    grid-template-rows: 1fr 2fr;
 }
 
 .logo-large {
@@ -209,6 +196,7 @@ main {
     min-width:220px;
     float: top;
     user-select: none;
+    padding-bottom: 1vh;
 }
 
 .homepage-text {
@@ -302,7 +290,8 @@ main {
     padding: 1em 1em 1em 0;
     width: 250px;
     min-width: 100px;
-    justify-self: end;
+    height: 100%;
+    display: flex;
 }
 
 .about-textbox {
@@ -311,7 +300,7 @@ main {
     gap: 0.5em;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: start;
 }
 
 .about-footer {
@@ -341,5 +330,28 @@ main {
 
     .about-textbox {
         justify-content: start;
+    }
+}
+
+/* cross-device compatibility */
+
+@media only screen and (min-width: 601px) {
+    .background-container {
+        background-image: url("https://images.unsplash.com/photo-1515746648922-b3413763645a?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    }
+}
+
+@media only screen and (max-width: 600px)  {
+    nav button {
+        font-size: 5vw;
+    }
+
+    .page-content {
+        min-width: 100%;
+        padding: 4em 4em;
+    }
+
+    .about-container {
+        overflow-x: scroll;
     }
 }
